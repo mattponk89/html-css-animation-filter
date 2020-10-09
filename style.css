@@ -220,3 +220,37 @@
     bottom: calc(0% -10px);
   }
 }
+.relative{
+  position: relative;
+  height: 200px
+}
+.ball{
+  position:absolute;
+  height: 40px;
+  width: 40px;
+  background-color: red;
+  border: 1px solid red;
+  border-radius: 50%;
+  animation: rimbalzo 0.6s ease-out infinite alternate, laterale 11s linear infinite;
+  bottom: 0%;
+}
+@keyframes rimbalzo {
+  0%{
+    bottom: 0%;
+  }
+
+  100%{
+    bottom: 50%;
+  }
+}
+@keyframes laterale {
+  0%{
+    left: 0%;
+  }
+  50%{
+    left: calc(100% - 40px);
+  }
+  100%{
+    left: 0%;
+  }
+}
